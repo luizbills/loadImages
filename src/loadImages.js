@@ -3,10 +3,10 @@ function loadImages(map, onload) {
 
   var i,
     img, readyCallback, errorCallback,
-    loaded, total = 0,
+    loaded, total,
     loadedImages = {};
 
-  loaded = 0;
+  loaded = total = 0;
 
   for(i in map) {
     total++;
