@@ -14,17 +14,21 @@
       "chrome": "img/chrome" // this image not exists
     };
 
-    var result = loadImages(imagesMap, onReady);
+    loadImages(imagesMap, onReady);
 
-    function onReady() {
+    function onReady(result) {
       alert('images loaded!');
+      
+      // render all loaded images
+
+      // document.body.appendChild(result[ "ie" ]);
+      // document.body.appendChild(result[ "ff" ]);
+      // document.body.appendChild(result[ "o" ]);
 
       for (var i in result) {
         document.body.appendChild(result[i]);
       }
     }
-
-    console.log(result);
   </script>
 </body>
 </html>
