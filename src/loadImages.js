@@ -37,3 +37,6 @@ function loadImages(map, onload) {
     img.src = map[i];
   }
 }
+
+window.loadImages = loadImages;
+
