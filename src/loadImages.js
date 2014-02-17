@@ -16,14 +16,14 @@ function loadImages(map, onload) {
     loadedImages[this.title] = this;
     loaded++;
     if (loaded == total) {
-      onload();
+      onload(loadedImages);
     }
   };
 
   errorCallback = function() {
     total--;
     if (loaded == total) {
-      onload();
+      onload(loadedImages);
     }
   };
 
@@ -36,7 +36,4 @@ function loadImages(map, onload) {
 
     img.src = map[i];
   }
-
-  return loadedImages;
 }
-
