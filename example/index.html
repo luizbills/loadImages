@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>loadImages Example</title>
+</head>
+<body>
+
+  <script src="../src/loadImages.js"></script>
+  <script>
+    var imagesMap = {
+      "ie": "img/internet-explorer.png",
+      "ff": "img/firefox.jpg",
+      "o": "img/opera.png",
+      "chrome": "img/chrome" // this image not exists
+    };
+
+    var result = loadImages(imagesMap, onReady);
+
+    function onReady() {
+      alert('images loaded!');
+
+      for (var i in result) {
+        document.body.appendChild(result[i]);
+      }
+    }
+
+    console.log(result);
+  </script>
+</body>
+</html>
