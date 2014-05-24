@@ -25,7 +25,7 @@ loadImages(map, function(loadedImages) {
   window.images = loadedImages;
 
   // render a loaded image
-  document.body.appendChild( loadedImages['background'] );
+  document.body.appendChild( images['background'] );
 
 });
 
